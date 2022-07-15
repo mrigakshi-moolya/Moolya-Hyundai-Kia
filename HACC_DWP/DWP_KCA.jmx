@@ -1,0 +1,2106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="test.account" elementType="Argument">
+            <stringProp name="Argument.name">test.account</stringProp>
+            <stringProp name="Argument.value">kcistgbill2@yopmail.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="test.account.pw" elementType="Argument">
+            <stringProp name="Argument.name">test.account.pw</stringProp>
+            <stringProp name="Argument.value">hatatest123$</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="X-Fowarded" elementType="Argument">
+            <stringProp name="Argument.name">X-Fowarded</stringProp>
+            <stringProp name="Argument.value">209.203.79.108</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="from" elementType="Argument">
+            <stringProp name="Argument.name">from</stringProp>
+            <stringProp name="Argument.value">CWP</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="CWP HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">10.112.211.49</stringProp>
+        <stringProp name="HTTPSampler.port">6310</stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.proxyHost">10.112.211.49:6310</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="DWP HTTP Request Defaults" enabled="false">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">stg.dae.haccdealer.com</stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.proxyHost">10.112.211.49:6310</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="User Parameters" enabled="false">
+        <collectionProp name="UserParameters.names">
+          <stringProp name="-905826493">server</stringProp>
+        </collectionProp>
+        <collectionProp name="UserParameters.thread_values">
+          <collectionProp name="767419517">
+            <stringProp name="-1282573910">10.112.211.49:6310</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <boolProp name="UserParameters.per_iteration">false</boolProp>
+      </UserParameters>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="EXISTING CUSTOMERS SUBSCRIBE TO THE PLAN" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="LOGIN DWP [DWP][SEC-C0107] Login v2" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;loginId&quot;: &quot;${test.account}&quot;,&#xd;
+    &quot;password&quot;: &quot;${test.account.pw}&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/v1/dwp/lgn</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="false">
+            <collectionProp name="AuthManager.auth_list">
+              <elementProp name="" elementType="Authorization">
+                <stringProp name="Authorization.url">10.112.211.49:6310</stringProp>
+                <stringProp name="Authorization.username"></stringProp>
+                <stringProp name="Authorization.password"></stringProp>
+                <stringProp name="Authorization.domain"></stringProp>
+                <stringProp name="Authorization.realm"></stringProp>
+              </elementProp>
+            </collectionProp>
+            <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+          </AuthManager>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="[DWP][SEC-C0107] Login v2" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DAE</stringProp>
+              </elementProp>
+              <elementProp name="X-FORWARDED-FOR" elementType="Header">
+                <stringProp name="Header.name">X-FORWARDED-FOR</stringProp>
+                <stringProp name="Header.value">${X-Fowarded}</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="kcae4_test_account" elementType="Header">
+                <stringProp name="Header.name">kcae4_test_account</stringProp>
+                <stringProp name="Header.value">kcitest01@hata.com</stringProp>
+              </elementProp>
+              <elementProp name="hace4_test_account" elementType="Header">
+                <stringProp name="Header.name">hace4_test_account</stringProp>
+                <stringProp name="Header.value">hdmc2608_16@yopmail.com</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="accessToken" enabled="true">
+            <stringProp name="JSONPostProcessor.match_numbers">0</stringProp>
+            <stringProp name="JSONPostProcessor.referenceNames">accessToken</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs"></stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="LOGIN [CWP][SEC-C0107] Login v2" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;loginId&quot;: &quot;${test.account}&quot;,&#xd;
+    &quot;password&quot;: &quot;${test.account.pw}&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/v2/login</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="[CWP][SEC-C0107] Login v2" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">${from}</stringProp>
+              </elementProp>
+              <elementProp name="X-FORWARDED-FOR" elementType="Header">
+                <stringProp name="Header.name">X-FORWARDED-FOR</stringProp>
+                <stringProp name="Header.value">${X-Fowarded}</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="kcae4_test_account" elementType="Header">
+                <stringProp name="Header.name">kcae4_test_account</stringProp>
+                <stringProp name="Header.value">kcitest01@hata.com</stringProp>
+              </elementProp>
+              <elementProp name="hace4_test_account" elementType="Header">
+                <stringProp name="Header.name">hace4_test_account</stringProp>
+                <stringProp name="Header.value">hdmc2608_16@yopmail.com</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="accessToken" enabled="true">
+            <stringProp name="JSONPostProcessor.match_numbers">0</stringProp>
+            <stringProp name="JSONPostProcessor.referenceNames">accessToken</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.result.token.accessToken</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="[DWP][BIL-D0011] Get List subscriptions by account key" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;userId&quot;:&quot;EgVEsQ4CMB+4vL53kWhZYw==&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/dwp/subscriptionbyaccount</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="[DWP][BIL-D0011] Get List subscriptions by account key" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DAE</stringProp>
+              </elementProp>
+              <elementProp name="X-FORWARDED-FOR" elementType="Header">
+                <stringProp name="Header.name">X-FORWARDED-FOR</stringProp>
+                <stringProp name="Header.value">110.2.30.456</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">eyJlbmMiOiJZdVBKckhQYjVnN2w3bHFUQkg1SUE4dXBzb2NjUWJqVmNkMXg0RmVIcWFCRnBXK3p2U3BkTGxVMm9kMDU2NlJnUDhTYWMySWNMUndKcjZ3WmhxU1dEUnJXd0ZZdkpNNUpHYVF0b3I2YVllVXpMWFl5cUswZ1NGVFZ1T2ZkVk54cmFYUWdyWkI3TE9sbks4dzMzcmJSZEhPNjZGd0RWclIvRVZiSGV2b3pORjBUaUFqZmp4U0dRZlA1WWZSWjYvUFhLdzJkckhsSVdrNFVUZGk3YWE1K0E5RmUyUGVNTHcxc1pTblJPdlFEVzYxdEpRMFFaOWNWL0FHYy9KZm9mNEdOaHgzOGNzYlo5U0lPa0g4cExqd1FDN0ZBMDNWZ0kwdlErR3N1UDNlZXZ2eWNIc0I1cEgwaXE4LzJFU2NXYUdFSnM1c1lUbWpkL0FzRUFWYk0vdlVkbXRqaXFSMFpYNEREcWsxWW04UmZPY29FQ2IrWEh4YWVpcGZsRXNWL2xENktwS1RVK01jUktCWVlWMnI1c1pmUGFQSU1HUGdCOWoyVE9McFY4UXVnUXNzNDI4UlZMQ1ZTMGhqdjFlSXB5dmE5eW9PNmIxdTlIU0daQU9hOHV6Mk9McE9ldjhRZkNraytvYnRIb3B1UUY4ZjRpbjg0a0Q2TlNLS3JLWTNWU1V6TUU0TmtsOFM0N2JUWVZTd0dlT0luQ243bldNU0NyekE3ckFyN2lhYzd5VS9hSmpSSUg4b3hoWUtGbDVaNUVJSlRMRXJDc0F2c3R1ZlE4QU1lbDRxMXVtaU9xeGhTbnRHQzExTE55S2hObTMrVlVheVVYTGhVcDlMakxXSzBJSklxUkkybGtMSm41MStORG9hTHlvSWpkZEhIUjFib0M2SjBWK2VDSXJhaVJrQmVTRDdHK096bVdNWXd1U1BsTXhlV2NrYStMN2QxSi80U0hPNGkxMTdVbG1XeURGNUpZSi8rSzcxUTU2cXJCaktwVzc2NDE0L25WbitaTThwSUZRd1FvZWZqRlVZRFpUSlRLVmlnYnhBUDZnZWMwMnhjL09nS1dXTjdzMWt3aTVXNjhXc0hYMGpDNkRXQm5CdnJoWkxoZFpXbG1yNnM0QkU3RER5OVhNQkx0MG4zVmxZekJkTDRGSEhUbTR2dU54OW5pb0dyNXZvRlZMQUJmL2VpMHdGY0s5TERaengyemlYZW0xMW9ZTUQwQ04xZFlJbDR6UEFQSFRNMHdWNmdzdGRWcElwSHlwbkdkVjhFOTNqM2tJSTBkMXZzOVlrQzh5VUVRZUVhMVZ2dEh1TmxvZmREWjZmNDRMQjdVY081UHpZczQ5UldNdUdtMXpybkpBU2tVTnVFIiwia2V5IjoiTTZqajVyVnVQTjEvckpuc01Pd0toYkpUQTRWeDd6T0J6V3BrVDVaNWZ6M0l5b295RUxBNW9MMCtJaTc0SHdlSG5ScVF3Mkt3K0I1WXFkVUJTWnlKZ1E9PSJ9</stringProp>
+              </elementProp>
+              <elementProp name="X-FORWARDED-FOR" elementType="Header">
+                <stringProp name="Header.name">X-FORWARDED-FOR</stringProp>
+                <stringProp name="Header.value">110.2.30.456</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="[DWP][BIL-D0012] change subscription - upgrade/downgrade" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &#xd;
+  &quot;addProductRatePlanChargeId&quot;: &quot;126&quot;,&#xd;
+  &quot;userId&quot;: &quot;EgVEsQ4CMB+4vL53kWhZYw==&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/dwp/changesubscription</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="[DWP][BIL-D0012] change subscription - upgrade/downgrade" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DAE</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="X-Forwarded-For" elementType="Header">
+                <stringProp name="Header.name">X-Forwarded-For</stringProp>
+                <stringProp name="Header.value">10.119.132.25</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="DWP Select package - Product lookup" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="nextPage" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">nextPage</stringProp>
+                <stringProp name="Argument.value">abc</stringProp>
+                <stringProp name="Argument.desc">nextPage</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="page" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">page</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">page</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="pageSize" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">pageSize</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">pageSize</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${uri}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/billing/product/</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="DWP Select package - Product lookup" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DAE</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">eyJlbmMiOiJUVUZjaktyQ2NCQTVjRFU3d2dobWZTb3NhekxFZ3VFcWNHVDUxRjFjSjhOS3VKQUxBdXVGU3NGZGZGeGQ2bGNBQXovMmlndmFTTHZZU2RKemt5cktUaXhERzVkUlJYNUYyYkcvK1ZUaXdESlZWb1plQzFiTkUrbTlQYjB5MWxrVWU1N2lOeGdCOGlMLzB6OVkyWVpPRkhkMHVobE1LblFEaGMwclFPUzloR0tYTWViUW9uSVNkS1pjUVRWSXpzM1Z4Z01mUG1xMUJTeEFPVUpCT2liSVR4cFJPQ2t0Sm1wa2ZjQS9jUlE3dUcxN1VudURDZGJSbWRkRjYvWmx3U29HUGNySG9NanA2ZDFHMlI4TUZWVVdyUzdMRVNseHNEdFBpZVFKUXd4cFhUOVRUaVNGTGMxRzhNQ0lwcUtRMm0zZ2M0dnJxN2RRTzZ3Nk5uOFJEMmxMNDhidHRrYWpWbTdoekc5V21TK2RvMGovbno3cTZGVEdRN2ZaQ1p0U0QxdFBrUmIxUVB5ZmlucDk5dEZEMkxpY0FIT3F0UVRjbm5nc3kyMUxQd2RTZXI5bzE1NkFNR1VTdFk1RUg2ei9CZ2d1SXR1UDd0V1NvNUgxMkxlM1RuckIzK3hIdlMxZWkrMXllS1BNakl4bmRFUDcyQ1ozNitZYU1qN3oyclI3TGpCUURBUmI0N25pckR0T2U4QkM5OXRkWUhmUnMyZGZhSWhCTng5SDlCeENoSmpidGRrR2VYUXNGNnRGOGlvdTlNc3QyajBXY0xTOUJZZHNZdWZmU3BJL1BOM2FNUWtyNHl3dDFlSE1oKzhGZ0lmZ1VTKy80c1hRb25kSUZUSGp3K3VDbWlRYVRmUTRyNHE1YmowM3lvSWR5TUFBSUpvRnZPNU85dWg0WFZBRjB6ODJZRkt6L2l4cThoNXY0TTdTU1FYK2w4OTJvYXYvb3N1ZzlQNUxqenNUa2ZsMXJ1WkdKWmxpNGNZRkwrUkVvZ3M5bVRzNUxBRC8zWW0vcFBwYkJEOG1zcVc1d2xJU0hFMTN5a2NFZ1dRYnB4VitHZnFPWWQ4dWNuWlZNK2t4a2loaWR2UW82Q0E3dGdaanNCaXdsM1RqL3hjcDlJcEZPcDU2TXZQV0JOMHMrMS9rd3I0eVo3N2N1KzZqZDY0NFp4NEZwWXNVWmZmeWpQTEt0S0tySVRuWW8xUFVwK3ZkaFlBWE1Yb29Rc2Z6UW5VYjNGQ2c4SEcwN1hGSXhXWWdOSTIzN2pCOER1YVdFWlIxV21hbCtYZWVDa1hNVHE5aGFieXZxNzczdVoxMEpyRDNaczlWTWlDL0ZGQ2R0cXRJQ3huK3k2Qm91ZUpxdlNieE52SS9uMCs1Iiwia2V5IjoiZXpUQ000bzMzalhpbWg4R2RHalNETEEreTV1TmZ0M05wQWgvV1UyMVVjTEZ4SVVYSHBKSTNmUS9HTkNreHJnZlJkaDV3a2VaVkxFdzNqdElQK0xRd1E9PSJ9</stringProp>
+              </elementProp>
+              <elementProp name="X-Forwarded-For" elementType="Header">
+                <stringProp name="Header.name">X-Forwarded-For</stringProp>
+                <stringProp name="Header.value">10.119.132.25</stringProp>
+              </elementProp>
+              <elementProp name="vehicleId" elementType="Header">
+                <stringProp name="Header.name">vehicleId</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="DWP - Previews-Order-before payment" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;discountInfo&quot;: [&#xd;
+        {&#xd;
+            &quot;afterDiscountPrice&quot;: 0,&#xd;
+            &quot;discountPrice&quot;: 0,&#xd;
+            &quot;listPrice&quot;: 0,&#xd;
+            &quot;productRatePlanId&quot;: 0,&#xd;
+            &quot;todsPromoId&quot;: 0&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;profile&quot;: {&#xd;
+        &quot;address&quot;: {&#xd;
+            &quot;city&quot;: &quot;string&quot;,&#xd;
+            &quot;postalCode&quot;: &quot;string&quot;,&#xd;
+            &quot;province&quot;: &quot;string&quot;,&#xd;
+            &quot;street&quot;: &quot;string&quot;,&#xd;
+            &quot;suite&quot;: &quot;string&quot;&#xd;
+        },&#xd;
+        &quot;billAddress&quot;: {&#xd;
+            &quot;city&quot;: &quot;string&quot;,&#xd;
+            &quot;postalCode&quot;: &quot;string&quot;,&#xd;
+            &quot;province&quot;: &quot;string&quot;,&#xd;
+            &quot;street&quot;: &quot;string&quot;,&#xd;
+            &quot;suite&quot;: &quot;string&quot;&#xd;
+        },&#xd;
+        &quot;firstName&quot;: &quot;string&quot;,&#xd;
+        &quot;lastName&quot;: &quot;string&quot;,&#xd;
+        &quot;middleName&quot;: &quot;string&quot;,&#xd;
+        &quot;notificationEmail&quot;: &quot;string&quot;,&#xd;
+        &quot;phones&quot;: {&#xd;
+            &quot;primary&quot;: &quot;string&quot;,&#xd;
+            &quot;secondary&quot;: &quot;string&quot;&#xd;
+        },&#xd;
+        &quot;prefix&quot;: &quot;string&quot;&#xd;
+    },&#xd;
+    &quot;promoCode&quot;: &quot;string&quot;,&#xd;
+    &quot;rdrToken&quot;: &quot;string&quot;,&#xd;
+    &quot;selectableProducts&quot;: [&#xd;
+        {&#xd;
+            &quot;productName&quot;: &quot;string&quot;,&#xd;
+            &quot;ratePlanCharges&quot;: [&#xd;
+                {&#xd;
+                    &quot;currency&quot;: &quot;CAD&quot;,&#xd;
+                    &quot;listPrice&quot;: &quot;string&quot;,&#xd;
+                    &quot;name&quot;: &quot;string&quot;&#xd;
+                }&#xd;
+            ],&#xd;
+            &quot;ratePlanId&quot;: 0,&#xd;
+            &quot;ratePlanName&quot;: &quot;string&quot;,&#xd;
+            &quot;subscriptionEndDate&quot;: &quot;2022-03-23T21:40&quot;,&#xd;
+            &quot;subscriptionStartDate&quot;: &quot;2022-03-23T21:4&quot;&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;userId&quot;: &quot;string&quot;,&#xd;
+    &quot;vehicle&quot;: {&#xd;
+        &quot;nickName&quot;: &quot;string&quot;,&#xd;
+        &quot;vin&quot;: &quot;string&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/billing/cwp/previewOrder</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="DWP - Previews-Order-before payment" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DAE</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="X-FORWARDED-FOR" elementType="Header">
+                <stringProp name="Header.name">X-FORWARDED-FOR</stringProp>
+                <stringProp name="Header.value">1.2.3.4</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="payment-methods-cc-accounts-DWP" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="nextPage" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">nextPage</stringProp>
+                <stringProp name="Argument.value">abc</stringProp>
+                <stringProp name="Argument.desc">nextPage</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="page" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">page</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">page</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="pageSize" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">pageSize</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">pageSize</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${uri}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/dwp/payment-methods/credit-cards/accounts</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="payment-methods-cc-accounts-DWP" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DWP</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">eyJlbmMiOiJUVUZjaktyQ2NCQTVjRFU3d2dobWZTb3NhekxFZ3VFcWNHVDUxRjFjSjhOS3VKQUxBdXVGU3NGZGZGeGQ2bGNBQXovMmlndmFTTHZZU2RKemt5cktUaXhERzVkUlJYNUYyYkcvK1ZUaXdESlZWb1plQzFiTkUrbTlQYjB5MWxrVWU1N2lOeGdCOGlMLzB6OVkyWVpPRkhkMHVobE1LblFEaGMwclFPUzloR0tYTWViUW9uSVNkS1pjUVRWSXpzM1Z4Z01mUG1xMUJTeEFPVUpCT2liSVR4cFJPQ2t0Sm1wa2ZjQS9jUlE3dUcxN1VudURDZGJSbWRkRjYvWmx3U29HUGNySG9NanA2ZDFHMlI4TUZWVVdyUzdMRVNseHNEdFBpZVFKUXd4cFhUOVRUaVNGTGMxRzhNQ0lwcUtRMm0zZ2M0dnJxN2RRTzZ3Nk5uOFJEMmxMNDhidHRrYWpWbTdoekc5V21TK2RvMGovbno3cTZGVEdRN2ZaQ1p0U0QxdFBrUmIxUVB5ZmlucDk5dEZEMkxpY0FIT3F0UVRjbm5nc3kyMUxQd2RTZXI5bzE1NkFNR1VTdFk1RUg2ei9CZ2d1SXR1UDd0V1NvNUgxMkxlM1RuckIzK3hIdlMxZWkrMXllS1BNakl4bmRFUDcyQ1ozNitZYU1qN3oyclI3TGpCUURBUmI0N25pckR0T2U4QkM5OXRkWUhmUnMyZGZhSWhCTng5SDlCeENoSmpidGRrR2VYUXNGNnRGOGlvdTlNc3QyajBXY0xTOUJZZHNZdWZmU3BJL1BOM2FNUWtyNHl3dDFlSE1oKzhGZ0lmZ1VTKy80c1hRb25kSUZUSGp3K3VDbWlRYVRmUTRyNHE1YmowM3lvSWR5TUFBSUpvRnZPNU85dWg0WFZBRjB6ODJZRkt6L2l4cThoNXY0TTdTU1FYK2w4OTJvYXYvb3N1ZzlQNUxqenNUa2ZsMXJ1WkdKWmxpNGNZRkwrUkVvZ3M5bVRzNUxBRC8zWW0vcFBwYkJEOG1zcVc1d2xJU0hFMTN5a2NFZ1dRYnB4VitHZnFPWWQ4dWNuWlZNK2t4a2loaWR2UW82Q0E3dGdaanNCaXdsM1RqL3hjcDlJcEZPcDU2TXZQV0JOMHMrMS9rd3I0eVo3N2N1KzZqZDY0NFp4NEZwWXNVWmZmeWpQTEt0S0tySVRuWW8xUFVwK3ZkaFlBWE1Yb29Rc2Z6UW5VYjNGQ2c4SEcwN1hGSXhXWWdOSTIzN2pCOER1YVdFWlIxV21hbCtYZWVDa1hNVHE5aGFieXZxNzczdVoxMEpyRDNaczlWTWlDL0ZGQ2R0cXRJQ3huK3k2Qm91ZUpxdlNieE52SS9uMCs1Iiwia2V5IjoiZXpUQ000bzMzalhpbWg4R2RHalNETEEreTV1TmZ0M05wQWgvV1UyMVVjTEZ4SVVYSHBKSTNmUS9HTkNreHJnZlJkaDV3a2VaVkxFdzNqdElQK0xRd1E9PSJ9</stringProp>
+              </elementProp>
+              <elementProp name="X-Forwarded-For" elementType="Header">
+                <stringProp name="Header.name">X-Forwarded-For</stringProp>
+                <stringProp name="Header.value">10.119.132.25</stringProp>
+              </elementProp>
+              <elementProp name="nextPage" elementType="Header">
+                <stringProp name="Header.name">nextPage</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="dwp - rsasignature" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${uri}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/dwp/rsasignature</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="dwp - rsasignature" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DAE</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">eyJlbmMiOiJoL2crY3o3V3hUNGRYVldjUExHM083SkVJVnovZHo4UmU5cXNQNCtURFZ0SEpMMkFlZDlJU1E4N0Yydno0dDlJU25TTU5FcFZhb241b3BFOVpuQ3FHZmR3MjRhNEJqUUhDZXRaQm1PQUY0Tm51Qk5EaWp3QzJLVDFXcUhCZ3FGc3VkRXJPVEpjRmthNWVTam5SREU3UVlxcHJIMEJUL0xkbWF6cVVBNUFQUHlqRXRDSjZGdlFIbXpDMmJFRC9SUnpTZVowK1pnQWx5WW8yUHhxci9oem1IU2N3OWpId2JyYW00ZXA1REdZNWliOEVpR1lueTlaOERoeURGb3JLUHhEVlpKM1lORGtFbWF5aGh6Z29FOUZ4MkUrWnB5RFRPQWNwMVhSVXBCNkkzK2MybHBpRUl4ZjNxVnVEZHpBQjdmRlhVbDI1MlpYU0psV3FoUzFYdVN4TE1iWWFpOXdFM1NhMDE0WXhJUTZ6SFl3b093ZHJDeDhPUFRBVHhiUkQ4Y25YdkxINnVSZGpCVU1TMUJEM3JwTlgzZnE1TDAxSXlnZ201UmlCRlVWWnNiaEtObk1WOWFWT3ZUcmEraHNYaUp2VWc1ZFlmcVoyaG5teFY2SWI0NnFjQThNZ05qU0tDelhPNzh2cGtLdCtwTjBFMmJGY3RuSWZBNjJ2bE82QXpvSnJHbXBxNU5jclVPejh4UnB3MHp6cGJUZGhxQksrNXBjaGJEdEZ4Qm5NbnEvbXp5ODRlK1hxR0x1ODZMVjRRK0g4UG1yUkEyakYreVllM1pqZEd3S283RzhwemdXMC8rTC9lcVhRMjBCbkRkZFNKNnl3cGU4eWVVYUpkWFFMaWpleFRXWGlQM1ZnRnN5ZHdRNUxScWR4WExaYXJXaFJWSHNJbXg5eTlIMTFtWmYyMC8xUmpXWmdYVmk1NGFzUzZtRWpOb1UvVEVYWU1SNWkrajMwQWhEbVpXbS8yS2pDL0hJTkx5Snk3eHU0QjlwK1JDSlRMVW4ya2ZtZmR0QXA5VFJrY0ovUnRmQWlGNE1Sb29meTIvUVkxYVF5cXV4a05UVDFQendDTVpreVdlMEVaYVN3S3FWYUpJd3FncC9IaU4vL2w5NFo3VE54WWIvVW1TQ0hVTVdvRnpWMzR2YnJwdXl4d3c1Nkw5SjFEMnB3MFcvNnVNak1TQmZqbXJTb0EwdnpaTzJlTTJwcEJsTjZrR29wT2JSSi8wVjdtZmYvK0Vld2J1MkF0dklGNkFNSVgzblA2eXpaaE1JNGZDenNOMFkwRVBPMDVFWlJLZ204akNGSDJlbDJPYlFTNEcybERGNDhXVjZSME1QengxN0hkS29yMkxQZ3JiYTA2OGN5djZsIiwia2V5Ijoib3ROeGNjN0U2STVGR3AwQ1dyMXJpNFVSZEtHVWNMU2xnQ1pJTHU5VGdTbUtZTzgzbmljSndwR3BsakFKcXFGbTZGNGRlZmIzd0YyQys3d1hPNnRRaWc9PSJ9</stringProp>
+              </elementProp>
+              <elementProp name="X-Forwarded-For" elementType="Header">
+                <stringProp name="Header.name">X-Forwarded-For</stringProp>
+                <stringProp name="Header.value">10.119.132.25</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="[DWP][BIL-P0005] add new credit card" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;userId&quot;: &quot;t5OhOQX1PvwXOq0XDMz91A==&quot;,&#xd;
+  &quot;address1&quot;: &quot;570 Cloyd Drive1&quot;,&#xd;
+  &quot;address2&quot;: &quot;string&quot;,&#xd;
+  &quot;cardDefault&quot;: &quot;N&quot;,&#xd;
+  &quot;city&quot;: &quot;CA&quot;,&#xd;
+  &quot;country&quot;: &quot;USA&quot;,&#xd;
+  &quot;county&quot;: null,&#xd;
+  &quot;email&quot;: &quot;xyz.com&quot;,&#xd;
+  &quot;firstName&quot;: &quot;Jacinthe5&quot;,&#xd;
+  &quot;lastName&quot;: &quot;Fay5&quot;,&#xd;
+  &quot;phone&quot;: &quot;1111111111&quot;,&#xd;
+  &quot;province&quot;: &quot;CA&quot;,&#xd;
+  &quot;zipCode&quot;: &quot;94167&quot;,&#xd;
+  &quot;zuoraPaymentId&quot;: &quot;8ad0950c7fb00d72017fb09f777d21f7&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/dwp/payment-methods/credit-cards</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="[DWP][BIL-P0005] add new credit card" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DAE</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="X-Forwarded-For" elementType="Header">
+                <stringProp name="Header.name">X-Forwarded-For</stringProp>
+                <stringProp name="Header.value">10.112.211.49</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="[DWP][BIL-P0009] save default credit card" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;paymentMethodId&quot;: 230,&#xd;
+    &quot;userId&quot;: &quot;EgVEsQ4CMB+4vL53kWhZYw==&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/dwp/payment-methods/default-card</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="[DWP][BIL-P0009] save default credit card" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DAE</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="X-Forwarded-For" elementType="Header">
+                <stringProp name="Header.name">X-Forwarded-For</stringProp>
+                <stringProp name="Header.value">10.119.132.25</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="EXISTING CUSTOMERS CANCEL SUBSCRIPTION" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="[DWP][BIL-D0010] cancel subscription Copy" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;vin&quot;:&quot;MKTESTVIN00000011&quot;,&#xd;
+    &quot;userId&quot;:&quot;EgVEsQ4CMB+4vL53kWhZYw==&quot;,&#xd;
+    &quot;subscriptionId&quot;:&quot;254&quot;,&#xd;
+    &quot;reasonCode&quot;:&quot;CANRS002&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/dwp/billing/cancelsubscription</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="[DWP][BIL-D0010] cancel subscription Copy" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DAE</stringProp>
+              </elementProp>
+              <elementProp name="X-FORWARDED-FOR" elementType="Header">
+                <stringProp name="Header.name">X-FORWARDED-FOR</stringProp>
+                <stringProp name="Header.value">110.2.30.456</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">eyJlbmMiOiJ4VjAvTHk4ZUgzZ1Y5Mm9yb29lRDE0SXRQd1prcXlyZUh6VUt3WXFjeG9HV0RnVzRTMytwUUVzTzJLTFhBNXVDT1RpQ1U4Qk45diszZ29GQis5NElLeDZzYWlNRTVXRDJvMXhyVEczWnF1c0RMcEY2aUx3c0FhVjBmRkFBdjFWZW9NNDByZmRtYjRibTkxUE9XQjd6UCtPdGIzY2VWYjZXSjQ5ZFIzLzV3ZW9oMzVXcDR5ZE5WQkFPdU1iTmdnR3RYYzJQcXRHWHZxQnQ1aUVPR1pHS3RpbXlVSlRiNFdrYXNTWXhUV1pMQStocWVBQUpXYk10N2gwbmxUcVd1eThJemd6cEttU0tjMWk3cXJtcGo4c1VTa0dOQURhT28wVmR1SS9vNjVzR2pnc1JtOXZmakxtUDRGYXN2d3BOTEN4SWhacUNoK2pIK0ZSdmtVNXNQWE1PNWkrRUJlcVlNWDBrcUhCR3FqSjZ3aVJ5WmQ4enRNRU9rODgxMkxuR2g5dC9ndU5vZ0EyWHdBMmZYSGJGaTJRTUljMDRwUDlQb0NtYlMxb2RRMmdXZnU0R0ptZEdKaklOUFhMd1VId1cxZmc0eHJZdjBseXc3OHg0alJSTVh1QkVEUWlHQU1HY1NTaVQ2UkpuRGNmRkNibVh2dlZKS2wyUFJCT2t6UVQvOFhpZzY3Nm0zMVlxL3R4ZUZzbi9iYkY2MU5qNVhmOStSNUtNd2JPM3huczdvQlo5VS9zakVPL2QybXhIZURVOTc1QW16V0RFQ09keUd5elVZT3FpS1lXNzVMVjhvNWpXRG1CY3h1aFBRck94M1pyQkJXSFZPME8zaGZKQzhTbjlSZC9RNjZiZTMvWjBBSms3QTErNXlHbFYzNXgyL1pUU3luR2NVZkNYWlpyejJmYlVZclFHQkoxZndlSWFCeTBDbHN2TDc2dkg5ckI0RmVlSU5jRE15RG9TUCs3alRpblo2WGw2V0xrcXd1WmxBZzY1RGN5MGpWaEUrbVVYL0s0aDgzVHNhbEVYbk9IbktaRTdTczZ0QUJLS2czYzM5d1Z1MVpuUWVmVEY1eklXSWwxeWtYcU9ybzFvQW9ZWFRHcjZzSjR2SGpGdS9NZ0VpaFNJWDNWblhRbFFidGZWdTBoVC8zbkJmaEpGOTdmZ013S203MUFNTmwvM1NDb3NWNE55aUtJVTZKd3ZBajhXZ2FCYVY4eHRYa1ZteHlkaUdqQUEwYmxwTEZXcU8rS2FRbitmWFJENEduclNPaUY2NlNTaDg5T3pralR3TXhLN0RVYThvUjlsa0xqSDIrK3Y5ZUxhZjhjTzFSbGtjVGVRbjdyeWtoMnZYakYyM1VOdnh3RFUzOVJCIiwia2V5IjoiTDJQQlR3WjNqeW1JbTEzaHhWQjVTRWFjMGx1LzJ0SUFlKzJJTEtsU0h1eDZaSUVhVzhTbzZHNElOVU94VGtKZ01JUWV4cEVvMWs1VWxKanMvN1V0amc9PSJ9</stringProp>
+              </elementProp>
+              <elementProp name="X-FORWARDED-FOR" elementType="Header">
+                <stringProp name="Header.name">X-FORWARDED-FOR</stringProp>
+                <stringProp name="Header.value">110.2.30.456</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="[DWP][BIL-P0008] delete credit card" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;paymentMethodId&quot;: 230,&#xd;
+    &quot;userId&quot;: &quot;EgVEsQ4CMB+4vL53kWhZYw==&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/dwp/payment-methods/delete</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="[DWP][BIL-P0008] delete credit card" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DAE</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="X-Forwarded-For" elementType="Header">
+                <stringProp name="Header.name">X-Forwarded-For</stringProp>
+                <stringProp name="Header.value">10.119.132.25</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="RETURNED USER" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="[DWP][VHC-D0101] dwp_search customer" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;searchKeyword&quot;: &quot;melanie29@yopmail.com&quot;,&#xd;
+  &quot;searchType&quot;: &quot;E&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">dev.dae.haccdealer.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/dwp/srchcust</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="[DWP][VHC-D0101] dwp_search customer" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DAE</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="X-FORWARDED-FOR" elementType="Header">
+                <stringProp name="Header.name">X-FORWARDED-FOR</stringProp>
+                <stringProp name="Header.value">10.119.132.25</stringProp>
+              </elementProp>
+              <elementProp name="AccessToken" elementType="Header">
+                <stringProp name="Header.name">AccessToken</stringProp>
+                <stringProp name="Header.value">${accessToken}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="[DWP][BIL-P0006] retrieve products by brand and Vin" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;vin&quot;: &quot;MKTESTVIN00000012&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/dwp/billing/product</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="[DWP][BIL-P0006] retrieve products by brand and Vin" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DAE</stringProp>
+              </elementProp>
+              <elementProp name="X-FORWARDED-FOR" elementType="Header">
+                <stringProp name="Header.name">X-FORWARDED-FOR</stringProp>
+                <stringProp name="Header.value">1.2.3.4</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="WORKINGVIN" elementType="Header">
+                <stringProp name="Header.name">WORKINGVIN</stringProp>
+                <stringProp name="Header.value">MKTESTVIN00000012</stringProp>
+              </elementProp>
+              <elementProp name="newvin" elementType="Header">
+                <stringProp name="Header.name">newvin</stringProp>
+                <stringProp name="Header.value">MKTESTVIN00000007</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="DWP - Previews-Order-before payment" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;discountInfo&quot;: [&#xd;
+        {&#xd;
+            &quot;afterDiscountPrice&quot;: 0,&#xd;
+            &quot;discountPrice&quot;: 0,&#xd;
+            &quot;listPrice&quot;: 0,&#xd;
+            &quot;productRatePlanId&quot;: 0,&#xd;
+            &quot;todsPromoId&quot;: 0&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;profile&quot;: {&#xd;
+        &quot;address&quot;: {&#xd;
+            &quot;city&quot;: &quot;string&quot;,&#xd;
+            &quot;postalCode&quot;: &quot;string&quot;,&#xd;
+            &quot;province&quot;: &quot;string&quot;,&#xd;
+            &quot;street&quot;: &quot;string&quot;,&#xd;
+            &quot;suite&quot;: &quot;string&quot;&#xd;
+        },&#xd;
+        &quot;billAddress&quot;: {&#xd;
+            &quot;city&quot;: &quot;string&quot;,&#xd;
+            &quot;postalCode&quot;: &quot;string&quot;,&#xd;
+            &quot;province&quot;: &quot;string&quot;,&#xd;
+            &quot;street&quot;: &quot;string&quot;,&#xd;
+            &quot;suite&quot;: &quot;string&quot;&#xd;
+        },&#xd;
+        &quot;firstName&quot;: &quot;string&quot;,&#xd;
+        &quot;lastName&quot;: &quot;string&quot;,&#xd;
+        &quot;middleName&quot;: &quot;string&quot;,&#xd;
+        &quot;notificationEmail&quot;: &quot;string&quot;,&#xd;
+        &quot;phones&quot;: {&#xd;
+            &quot;primary&quot;: &quot;string&quot;,&#xd;
+            &quot;secondary&quot;: &quot;string&quot;&#xd;
+        },&#xd;
+        &quot;prefix&quot;: &quot;string&quot;&#xd;
+    },&#xd;
+    &quot;promoCode&quot;: &quot;string&quot;,&#xd;
+    &quot;rdrToken&quot;: &quot;string&quot;,&#xd;
+    &quot;selectableProducts&quot;: [&#xd;
+        {&#xd;
+            &quot;productName&quot;: &quot;string&quot;,&#xd;
+            &quot;ratePlanCharges&quot;: [&#xd;
+                {&#xd;
+                    &quot;currency&quot;: &quot;CAD&quot;,&#xd;
+                    &quot;listPrice&quot;: &quot;string&quot;,&#xd;
+                    &quot;name&quot;: &quot;string&quot;&#xd;
+                }&#xd;
+            ],&#xd;
+            &quot;ratePlanId&quot;: 0,&#xd;
+            &quot;ratePlanName&quot;: &quot;string&quot;,&#xd;
+            &quot;subscriptionEndDate&quot;: &quot;2022-03-23T21:40&quot;,&#xd;
+            &quot;subscriptionStartDate&quot;: &quot;2022-03-23T21:4&quot;&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;userId&quot;: &quot;string&quot;,&#xd;
+    &quot;vehicle&quot;: {&#xd;
+        &quot;nickName&quot;: &quot;string&quot;,&#xd;
+        &quot;vin&quot;: &quot;string&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/billing/cwp/previewOrder</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="DWP - Previews-Order-before payment" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DAE</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="X-FORWARDED-FOR" elementType="Header">
+                <stringProp name="Header.name">X-FORWARDED-FOR</stringProp>
+                <stringProp name="Header.value">1.2.3.4</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="DWP - retrieve subscriptions by account" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;userid&quot; : &quot;&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/billing/subscriptionbyaccount</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="DWP - retrieve subscriptions by account" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DAE</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="X-FORWARDED-FOR" elementType="Header">
+                <stringProp name="Header.name">X-FORWARDED-FOR</stringProp>
+                <stringProp name="Header.value">1.2.3.4</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="[DWP][BIL-P0006] retrieve credit cards of account" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;userId&quot;:&quot;EgVEsQ4CMB+4vL53kWhZYw==&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/dwp/payment-methods/credit-cards/accounts</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="[DWP][BIL-P0006] retrieve credit cards of account" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DAE</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="X-Forwarded-For" elementType="Header">
+                <stringProp name="Header.name">X-Forwarded-For</stringProp>
+                <stringProp name="Header.value">10.119.132.25</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="[DWP][BIL-P0009] save default credit card" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;paymentMethodId&quot;: 230,&#xd;
+    &quot;userId&quot;: &quot;EgVEsQ4CMB+4vL53kWhZYw==&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/dwp/payment-methods/default-card</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="[DWP][BIL-P0009] save default credit card" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DAE</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="X-Forwarded-For" elementType="Header">
+                <stringProp name="Header.name">X-Forwarded-For</stringProp>
+                <stringProp name="Header.value">10.119.132.25</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="NEW USER" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="DWP - Add vehicle - Trial subscription" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;billingAddress&quot;: {&#xd;
+        &quot;city&quot;: &quot;string&quot;,&#xd;
+        &quot;postalCode&quot;: &quot;string&quot;,&#xd;
+        &quot;province&quot;: &quot;string&quot;,&#xd;
+        &quot;street&quot;: &quot;string&quot;,&#xd;
+        &quot;suite&quot;: &quot;string&quot;&#xd;
+    },&#xd;
+    &quot;chargeAmount&quot;: 0,&#xd;
+    &quot;discountInfo&quot;: [&#xd;
+        {&#xd;
+            &quot;afterDiscountPrice&quot;: 0,&#xd;
+            &quot;discountPrice&quot;: 0,&#xd;
+            &quot;listPrice&quot;: 0,&#xd;
+            &quot;productRatePlanId&quot;: 0,&#xd;
+            &quot;todsPromoId&quot;: 0&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;notificationList&quot;: [&#xd;
+        {&#xd;
+            &quot;email&quot;: false,&#xd;
+            &quot;notificationType&quot;: &quot;string&quot;,&#xd;
+            &quot;push&quot;: false&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;paymentMethodId&quot;: &quot;string&quot;,&#xd;
+    &quot;pin&quot;: &quot;string&quot;,&#xd;
+    &quot;preferredDealer&quot;: &quot;string&quot;,&#xd;
+    &quot;profile&quot;: {&#xd;
+        &quot;address&quot;: {&#xd;
+            &quot;city&quot;: &quot;string&quot;,&#xd;
+            &quot;postalCode&quot;: &quot;string&quot;,&#xd;
+            &quot;province&quot;: &quot;string&quot;,&#xd;
+            &quot;street&quot;: &quot;string&quot;,&#xd;
+            &quot;suite&quot;: &quot;string&quot;&#xd;
+        },&#xd;
+        &quot;billAddress&quot;: {&#xd;
+            &quot;city&quot;: &quot;string&quot;,&#xd;
+            &quot;postalCode&quot;: &quot;string&quot;,&#xd;
+            &quot;province&quot;: &quot;string&quot;,&#xd;
+            &quot;street&quot;: &quot;string&quot;,&#xd;
+            &quot;suite&quot;: &quot;string&quot;&#xd;
+        },&#xd;
+        &quot;firstName&quot;: &quot;string&quot;,&#xd;
+        &quot;lastName&quot;: &quot;string&quot;,&#xd;
+        &quot;middleName&quot;: &quot;string&quot;,&#xd;
+        &quot;notificationEmail&quot;: &quot;string&quot;,&#xd;
+        &quot;phones&quot;: {&#xd;
+            &quot;primary&quot;: &quot;string&quot;,&#xd;
+            &quot;secondary&quot;: &quot;string&quot;&#xd;
+        },&#xd;
+        &quot;prefix&quot;: &quot;string&quot;&#xd;
+    },&#xd;
+    &quot;promocode&quot;: &quot;string&quot;,&#xd;
+    &quot;rdrToken&quot;: &quot;string&quot;,&#xd;
+    &quot;selectableProducts&quot;: [&#xd;
+        {&#xd;
+            &quot;packages&quot;: [&#xd;
+                {&#xd;
+                    &quot;features&quot;: [&#xd;
+                        &quot;string&quot;&#xd;
+                    ]&#xd;
+                }&#xd;
+            ],&#xd;
+            &quot;productId&quot;: 0,&#xd;
+            &quot;productName&quot;: &quot;string&quot;,&#xd;
+            &quot;rateplans&quot;: [&#xd;
+                {&#xd;
+                    &quot;productName&quot;: &quot;string&quot;,&#xd;
+                    &quot;ratePlanCharges&quot;: [&#xd;
+                        {&#xd;
+                            &quot;currency&quot;: &quot;CAD&quot;,&#xd;
+                            &quot;listPrice&quot;: &quot;string&quot;,&#xd;
+                            &quot;name&quot;: &quot;string&quot;&#xd;
+                        }&#xd;
+                    ],&#xd;
+                    &quot;ratePlanId&quot;: 0,&#xd;
+                    &quot;ratePlanName&quot;: &quot;string&quot;,&#xd;
+                    &quot;subscriptionEndDate&quot;: &quot;2022-03-21T13&#xd;
+&quot;subscriptionStartDate&quot;: &quot;2022-03-21T&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;vehicle&quot;: {&#xd;
+        &quot;nickName&quot;: &quot;string&quot;,&#xd;
+        &quot;vin&quot;: &quot;string&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/dwp/account/vehicle</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="DWP - Add vehicle - Trial subscription" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DAE</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="X-FORWARDED-FOR" elementType="Header">
+                <stringProp name="Header.name">X-FORWARDED-FOR</stringProp>
+                <stringProp name="Header.value">1.2.3.4</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="DWP - Validate vehicle/VIN" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;rdrToken&quot;: &quot;string&quot;,&#xd;
+    &quot;vin&quot;: &quot;string&quot;,&#xd;
+    &quot;userId&quot;: &quot;string&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/v4/vehicle/validate</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="DWP - Validate vehicle/VIN" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DWP</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="X-FORWARDED-FOR" elementType="Header">
+                <stringProp name="Header.name">X-FORWARDED-FOR</stringProp>
+                <stringProp name="Header.value">1.2.3.4</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Validate customer&apos;s email id" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${server}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/v4/email/validate</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Validate customer&apos;s email id" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DWP</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">${accessToken}</stringProp>
+              </elementProp>
+              <elementProp name="X-FORWARDED-FOR" elementType="Header">
+                <stringProp name="Header.name">X-FORWARDED-FOR</stringProp>
+                <stringProp name="Header.value">1.2.3.4</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="MISC DWP" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Product Selector - DWP" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="nextPage" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">nextPage</stringProp>
+                <stringProp name="Argument.value">abc</stringProp>
+                <stringProp name="Argument.desc">nextPage</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="page" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">page</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">page</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="pageSize" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">pageSize</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">pageSize</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${uri}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/billing/product/selector</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Product Selector - DWP" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DWP</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">eyJlbmMiOiJUVUZjaktyQ2NCQTVjRFU3d2dobWZTb3NhekxFZ3VFcWNHVDUxRjFjSjhOS3VKQUxBdXVGU3NGZGZGeGQ2bGNBQXovMmlndmFTTHZZU2RKemt5cktUaXhERzVkUlJYNUYyYkcvK1ZUaXdESlZWb1plQzFiTkUrbTlQYjB5MWxrVWU1N2lOeGdCOGlMLzB6OVkyWVpPRkhkMHVobE1LblFEaGMwclFPUzloR0tYTWViUW9uSVNkS1pjUVRWSXpzM1Z4Z01mUG1xMUJTeEFPVUpCT2liSVR4cFJPQ2t0Sm1wa2ZjQS9jUlE3dUcxN1VudURDZGJSbWRkRjYvWmx3U29HUGNySG9NanA2ZDFHMlI4TUZWVVdyUzdMRVNseHNEdFBpZVFKUXd4cFhUOVRUaVNGTGMxRzhNQ0lwcUtRMm0zZ2M0dnJxN2RRTzZ3Nk5uOFJEMmxMNDhidHRrYWpWbTdoekc5V21TK2RvMGovbno3cTZGVEdRN2ZaQ1p0U0QxdFBrUmIxUVB5ZmlucDk5dEZEMkxpY0FIT3F0UVRjbm5nc3kyMUxQd2RTZXI5bzE1NkFNR1VTdFk1RUg2ei9CZ2d1SXR1UDd0V1NvNUgxMkxlM1RuckIzK3hIdlMxZWkrMXllS1BNakl4bmRFUDcyQ1ozNitZYU1qN3oyclI3TGpCUURBUmI0N25pckR0T2U4QkM5OXRkWUhmUnMyZGZhSWhCTng5SDlCeENoSmpidGRrR2VYUXNGNnRGOGlvdTlNc3QyajBXY0xTOUJZZHNZdWZmU3BJL1BOM2FNUWtyNHl3dDFlSE1oKzhGZ0lmZ1VTKy80c1hRb25kSUZUSGp3K3VDbWlRYVRmUTRyNHE1YmowM3lvSWR5TUFBSUpvRnZPNU85dWg0WFZBRjB6ODJZRkt6L2l4cThoNXY0TTdTU1FYK2w4OTJvYXYvb3N1ZzlQNUxqenNUa2ZsMXJ1WkdKWmxpNGNZRkwrUkVvZ3M5bVRzNUxBRC8zWW0vcFBwYkJEOG1zcVc1d2xJU0hFMTN5a2NFZ1dRYnB4VitHZnFPWWQ4dWNuWlZNK2t4a2loaWR2UW82Q0E3dGdaanNCaXdsM1RqL3hjcDlJcEZPcDU2TXZQV0JOMHMrMS9rd3I0eVo3N2N1KzZqZDY0NFp4NEZwWXNVWmZmeWpQTEt0S0tySVRuWW8xUFVwK3ZkaFlBWE1Yb29Rc2Z6UW5VYjNGQ2c4SEcwN1hGSXhXWWdOSTIzN2pCOER1YVdFWlIxV21hbCtYZWVDa1hNVHE5aGFieXZxNzczdVoxMEpyRDNaczlWTWlDL0ZGQ2R0cXRJQ3huK3k2Qm91ZUpxdlNieE52SS9uMCs1Iiwia2V5IjoiZXpUQ000bzMzalhpbWg4R2RHalNETEEreTV1TmZ0M05wQWgvV1UyMVVjTEZ4SVVYSHBKSTNmUS9HTkNreHJnZlJkaDV3a2VaVkxFdzNqdElQK0xRd1E9PSJ9</stringProp>
+              </elementProp>
+              <elementProp name="X-Forwarded-For" elementType="Header">
+                <stringProp name="Header.name">X-Forwarded-For</stringProp>
+                <stringProp name="Header.value">10.119.132.25</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="payment-methods-cc-accounts-DWP" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="nextPage" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">nextPage</stringProp>
+                <stringProp name="Argument.value">abc</stringProp>
+                <stringProp name="Argument.desc">nextPage</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="page" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">page</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">page</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="pageSize" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">pageSize</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">pageSize</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${uri}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/dwp/payment-methods/credit-cards/accounts</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="payment-methods-cc-accounts-DWP" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DWP</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">eyJlbmMiOiJUVUZjaktyQ2NCQTVjRFU3d2dobWZTb3NhekxFZ3VFcWNHVDUxRjFjSjhOS3VKQUxBdXVGU3NGZGZGeGQ2bGNBQXovMmlndmFTTHZZU2RKemt5cktUaXhERzVkUlJYNUYyYkcvK1ZUaXdESlZWb1plQzFiTkUrbTlQYjB5MWxrVWU1N2lOeGdCOGlMLzB6OVkyWVpPRkhkMHVobE1LblFEaGMwclFPUzloR0tYTWViUW9uSVNkS1pjUVRWSXpzM1Z4Z01mUG1xMUJTeEFPVUpCT2liSVR4cFJPQ2t0Sm1wa2ZjQS9jUlE3dUcxN1VudURDZGJSbWRkRjYvWmx3U29HUGNySG9NanA2ZDFHMlI4TUZWVVdyUzdMRVNseHNEdFBpZVFKUXd4cFhUOVRUaVNGTGMxRzhNQ0lwcUtRMm0zZ2M0dnJxN2RRTzZ3Nk5uOFJEMmxMNDhidHRrYWpWbTdoekc5V21TK2RvMGovbno3cTZGVEdRN2ZaQ1p0U0QxdFBrUmIxUVB5ZmlucDk5dEZEMkxpY0FIT3F0UVRjbm5nc3kyMUxQd2RTZXI5bzE1NkFNR1VTdFk1RUg2ei9CZ2d1SXR1UDd0V1NvNUgxMkxlM1RuckIzK3hIdlMxZWkrMXllS1BNakl4bmRFUDcyQ1ozNitZYU1qN3oyclI3TGpCUURBUmI0N25pckR0T2U4QkM5OXRkWUhmUnMyZGZhSWhCTng5SDlCeENoSmpidGRrR2VYUXNGNnRGOGlvdTlNc3QyajBXY0xTOUJZZHNZdWZmU3BJL1BOM2FNUWtyNHl3dDFlSE1oKzhGZ0lmZ1VTKy80c1hRb25kSUZUSGp3K3VDbWlRYVRmUTRyNHE1YmowM3lvSWR5TUFBSUpvRnZPNU85dWg0WFZBRjB6ODJZRkt6L2l4cThoNXY0TTdTU1FYK2w4OTJvYXYvb3N1ZzlQNUxqenNUa2ZsMXJ1WkdKWmxpNGNZRkwrUkVvZ3M5bVRzNUxBRC8zWW0vcFBwYkJEOG1zcVc1d2xJU0hFMTN5a2NFZ1dRYnB4VitHZnFPWWQ4dWNuWlZNK2t4a2loaWR2UW82Q0E3dGdaanNCaXdsM1RqL3hjcDlJcEZPcDU2TXZQV0JOMHMrMS9rd3I0eVo3N2N1KzZqZDY0NFp4NEZwWXNVWmZmeWpQTEt0S0tySVRuWW8xUFVwK3ZkaFlBWE1Yb29Rc2Z6UW5VYjNGQ2c4SEcwN1hGSXhXWWdOSTIzN2pCOER1YVdFWlIxV21hbCtYZWVDa1hNVHE5aGFieXZxNzczdVoxMEpyRDNaczlWTWlDL0ZGQ2R0cXRJQ3huK3k2Qm91ZUpxdlNieE52SS9uMCs1Iiwia2V5IjoiZXpUQ000bzMzalhpbWg4R2RHalNETEEreTV1TmZ0M05wQWgvV1UyMVVjTEZ4SVVYSHBKSTNmUS9HTkNreHJnZlJkaDV3a2VaVkxFdzNqdElQK0xRd1E9PSJ9</stringProp>
+              </elementProp>
+              <elementProp name="X-Forwarded-For" elementType="Header">
+                <stringProp name="Header.name">X-Forwarded-For</stringProp>
+                <stringProp name="Header.value">10.119.132.25</stringProp>
+              </elementProp>
+              <elementProp name="nextPage" elementType="Header">
+                <stringProp name="Header.name">nextPage</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="DWP - Refresh Auth Token" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="nextPage" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">nextPage</stringProp>
+                <stringProp name="Argument.value">abc</stringProp>
+                <stringProp name="Argument.desc">nextPage</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="page" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">page</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">page</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="pageSize" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">pageSize</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.desc">pageSize</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${uri}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/dwp/gtothbyrftkn</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="DWP - Refresh Auth Token" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DWP</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">eyJlbmMiOiJUVUZjaktyQ2NCQTVjRFU3d2dobWZTb3NhekxFZ3VFcWNHVDUxRjFjSjhOS3VKQUxBdXVGU3NGZGZGeGQ2bGNBQXovMmlndmFTTHZZU2RKemt5cktUaXhERzVkUlJYNUYyYkcvK1ZUaXdESlZWb1plQzFiTkUrbTlQYjB5MWxrVWU1N2lOeGdCOGlMLzB6OVkyWVpPRkhkMHVobE1LblFEaGMwclFPUzloR0tYTWViUW9uSVNkS1pjUVRWSXpzM1Z4Z01mUG1xMUJTeEFPVUpCT2liSVR4cFJPQ2t0Sm1wa2ZjQS9jUlE3dUcxN1VudURDZGJSbWRkRjYvWmx3U29HUGNySG9NanA2ZDFHMlI4TUZWVVdyUzdMRVNseHNEdFBpZVFKUXd4cFhUOVRUaVNGTGMxRzhNQ0lwcUtRMm0zZ2M0dnJxN2RRTzZ3Nk5uOFJEMmxMNDhidHRrYWpWbTdoekc5V21TK2RvMGovbno3cTZGVEdRN2ZaQ1p0U0QxdFBrUmIxUVB5ZmlucDk5dEZEMkxpY0FIT3F0UVRjbm5nc3kyMUxQd2RTZXI5bzE1NkFNR1VTdFk1RUg2ei9CZ2d1SXR1UDd0V1NvNUgxMkxlM1RuckIzK3hIdlMxZWkrMXllS1BNakl4bmRFUDcyQ1ozNitZYU1qN3oyclI3TGpCUURBUmI0N25pckR0T2U4QkM5OXRkWUhmUnMyZGZhSWhCTng5SDlCeENoSmpidGRrR2VYUXNGNnRGOGlvdTlNc3QyajBXY0xTOUJZZHNZdWZmU3BJL1BOM2FNUWtyNHl3dDFlSE1oKzhGZ0lmZ1VTKy80c1hRb25kSUZUSGp3K3VDbWlRYVRmUTRyNHE1YmowM3lvSWR5TUFBSUpvRnZPNU85dWg0WFZBRjB6ODJZRkt6L2l4cThoNXY0TTdTU1FYK2w4OTJvYXYvb3N1ZzlQNUxqenNUa2ZsMXJ1WkdKWmxpNGNZRkwrUkVvZ3M5bVRzNUxBRC8zWW0vcFBwYkJEOG1zcVc1d2xJU0hFMTN5a2NFZ1dRYnB4VitHZnFPWWQ4dWNuWlZNK2t4a2loaWR2UW82Q0E3dGdaanNCaXdsM1RqL3hjcDlJcEZPcDU2TXZQV0JOMHMrMS9rd3I0eVo3N2N1KzZqZDY0NFp4NEZwWXNVWmZmeWpQTEt0S0tySVRuWW8xUFVwK3ZkaFlBWE1Yb29Rc2Z6UW5VYjNGQ2c4SEcwN1hGSXhXWWdOSTIzN2pCOER1YVdFWlIxV21hbCtYZWVDa1hNVHE5aGFieXZxNzczdVoxMEpyRDNaczlWTWlDL0ZGQ2R0cXRJQ3huK3k2Qm91ZUpxdlNieE52SS9uMCs1Iiwia2V5IjoiZXpUQ000bzMzalhpbWg4R2RHalNETEEreTV1TmZ0M05wQWgvV1UyMVVjTEZ4SVVYSHBKSTNmUS9HTkNreHJnZlJkaDV3a2VaVkxFdzNqdElQK0xRd1E9PSJ9</stringProp>
+              </elementProp>
+              <elementProp name="X-Forwarded-For" elementType="Header">
+                <stringProp name="Header.name">X-Forwarded-For</stringProp>
+                <stringProp name="Header.value">10.119.132.25</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="DWP-Validate-Promo-Code" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;productRatePlans&quot;: [&#xd;
+        {&#xd;
+            &quot;productName&quot;: &quot;string&quot;,&#xd;
+            &quot;ratePlanCharges&quot;: [&#xd;
+                {&#xd;
+                    &quot;currency&quot;: &quot;CAD&quot;,&#xd;
+                    &quot;listPrice&quot;: &quot;string&quot;,&#xd;
+                    &quot;name&quot;: &quot;string&quot;&#xd;
+                }&#xd;
+            ],&#xd;
+            &quot;ratePlanId&quot;: 0,&#xd;
+            &quot;ratePlanName&quot;: &quot;string&quot;,&#xd;
+            &quot;subscriptionEndDate&quot;: &quot;2022-03-23T21: 40: &quot;,&#xd;
+            &quot;subscriptionStartDate&quot;: &quot;2022-03-23T21: 4&quot;&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;promoCode&quot;: &quot;string&quot;,&#xd;
+    &quot;rdrToken&quot;: &quot;string&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${uri}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/tods/api/billing/dwp/validatePromo</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="DWP-Validate-Promo-Code" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="language" elementType="Header">
+                <stringProp name="Header.name">language</stringProp>
+                <stringProp name="Header.value">0</stringProp>
+              </elementProp>
+              <elementProp name="offset" elementType="Header">
+                <stringProp name="Header.name">offset</stringProp>
+                <stringProp name="Header.value">-8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="from" elementType="Header">
+                <stringProp name="Header.name">from</stringProp>
+                <stringProp name="Header.value">DWP</stringProp>
+              </elementProp>
+              <elementProp name="brand" elementType="Header">
+                <stringProp name="Header.name">brand</stringProp>
+                <stringProp name="Header.value">H</stringProp>
+              </elementProp>
+              <elementProp name="accessToken" elementType="Header">
+                <stringProp name="Header.name">accessToken</stringProp>
+                <stringProp name="Header.value">eyJlbmMiOiJlMFlwVGdYenFTWjJhUnpnTUZiMWE2Ymp1STlPbWg3ZklzeElsK0tNRTNmbkoyS3EyRG1UaFAxT0tMdmthTUhpNDlsZlBRbGdLYkZ3d0NzVHFnU0taWldkOE5TUlhPOGNzN2xDa1BFd3JHTVkwbjZSclB4N2pRRXJ6NVhFWkpkb3ZXc2pHKzlkZUZSbHp1NFg4eVI1UldEOUZhd0VROW53OGVSZkVkT0tJYmRmN2FTTDR6aTAyUGRIeDlJb2xmUi84Q3FHMTJZRWE5SVRXSnA2MDNySzh6ODJMci84YktpM0J4a1lZbk9vWTJBanQ2c3dOaVRmU0dyQ2Z5eGlzWHBWRmgyUy91bHVjdWFBSm52QmJ4bHRkR21wc1FHWFd3TVYwZGpzbVhoQVc0bFg4WjBhYjUzQXhwUnZtYVk1RURBZWEwcjlCT2dINHQ4b013dVRLSEZleFZ2SndFcEh4MTRDWS91REZydEhFTVVWNEh2anZLU2hxOXVZZ0R6TjMxYUpGQzZBeUppajIzdXVGNEE3Y3FYaHdOWW0zWStpNDN2TzE2UzUyeUZNVHdCdW5RMHJTRFY3bkR1MTRpWHZUZmx6ZHdkcmdQajRpTHd3amprNUNBVXFrMTN0Mk9jMlA2NEovQWJFMTBBYU5Ka0NJRm5xNys1TXNZZThqM3lBQ3BIUFhPaFllYmpEWkt0dG95MDBVc2tYQm4wY1VrcHJUL3BteXZsdnlVNzRUTHBJSXQ0M014RzBWaGM2citkdFhEQkF0SmlaUTRSb1puNFdhVXdLZFVUd0lMZWtOTEpmR2lVbGVPa0VwY21RSkQrcnQ3U01WTndTdFB4YWFSdDhyWmVtcjdIMUVhaWtmdDFwTmZpOTJrL1F6NWlqaUhUUnRkTTJYL3I1S2QxWXF6NnNtVkN6QUV6N1Q2NndoU1BNaEs3ZmJBLzNDVnhvYzZRR2JqejBBYTdUQWVQeEViUVdLOTRVTVNsL2VUQnZlTFdtbXluc2xib0JKa2dpTHdpRFlIL2wzT2psckl3SDE2SG1QWVV0MkZRR2t6WWJJUnlYZ0w4cS9aRFFieWVyZUtrSnliL2hEcVMyclhVVzY5d0oyTG1wUW9hZ1dVa1ZsUk1nR3YrWVRrNHFDTzBwYmNmVjZyWDY1VUJLaVJ4UXA2SmFhZzhNY0MwRlVUUngweUlLRFNtaGcrMnBjWFQ2cklubFc0Q1k4S2Z1WUcyVEFlWGZuVnNkeFVQL1pmTjFFNFRhYXUvbTBmUGV6UlBHNzBVT3ZmcHRoZXlEMk15NFNSaHpZL1FQL3VrODRSVDNxdVZHR3ZBV1FEU3BlY2Z0MmNONlFCdWhrd3pzYTBPTytta1FzOU9OIiwia2V5IjoiR1krb3BHNlU2YklsNU1oQUFOWFFKR0Z1dzJyT3NkWXhNMDRWVThiek9tWVp0dEJwQjU4MVVVTzg3OEJjYWpTTjJJaGhpK09JWEJURlpjOWE5SnJxQVE9PSJ9</stringProp>
+              </elementProp>
+              <elementProp name="X-Forwarded-For" elementType="Header">
+                <stringProp name="Header.name">X-Forwarded-For</stringProp>
+                <stringProp name="Header.value">10.119.132.25</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

@@ -1,0 +1,53 @@
+2022-07-14 10:53:53,266 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2022-07-14 10:53:53,300 INFO o.a.j.JMeter: Loading user properties from: C:\Users\dell\OneDrive\Downloads\apache-jmeter-5.4.1\apache-jmeter-5.4.1\bin\user.properties
+2022-07-14 10:53:53,302 INFO o.a.j.JMeter: Loading system properties from: C:\Users\dell\OneDrive\Downloads\apache-jmeter-5.4.1\apache-jmeter-5.4.1\bin\system.properties
+2022-07-14 10:53:53,317 INFO o.a.j.JMeter: Copyright (c) 1998-2021 The Apache Software Foundation
+2022-07-14 10:53:53,317 INFO o.a.j.JMeter: Version 5.4.1
+2022-07-14 10:53:53,317 INFO o.a.j.JMeter: java.version=16.0.1
+2022-07-14 10:53:53,317 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2022-07-14 10:53:53,317 INFO o.a.j.JMeter: os.name=Windows 10
+2022-07-14 10:53:53,317 INFO o.a.j.JMeter: os.arch=amd64
+2022-07-14 10:53:53,317 INFO o.a.j.JMeter: os.version=10.0
+2022-07-14 10:53:53,318 INFO o.a.j.JMeter: file.encoding=Cp1252
+2022-07-14 10:53:53,318 INFO o.a.j.JMeter: java.awt.headless=null
+2022-07-14 10:53:53,318 INFO o.a.j.JMeter: Max memory     =1073741824
+2022-07-14 10:53:53,318 INFO o.a.j.JMeter: Available Processors =4
+2022-07-14 10:53:53,332 INFO o.a.j.JMeter: Default Locale=English (EN)
+2022-07-14 10:53:53,333 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2022-07-14 10:53:53,333 INFO o.a.j.JMeter: JMeterHome=C:\Users\dell\OneDrive\Downloads\apache-jmeter-5.4.1\apache-jmeter-5.4.1
+2022-07-14 10:53:53,333 INFO o.a.j.JMeter: user.dir  =C:\Users\dell\Documents\MoolyaWorks\Hyundai\jmx\KCA_CWP
+2022-07-14 10:53:53,334 INFO o.a.j.JMeter: PWD       =C:\Users\dell\Documents\MoolyaWorks\Hyundai\jmx\KCA_CWP
+2022-07-14 10:53:53,581 INFO o.a.j.JMeter: IP: 10.120.7.102 Name: DESKTOP-U5EGGOS FullName: 10.120.7.102
+2022-07-14 10:53:53,756 INFO o.a.j.JMeter: Setting LAF to: laf:com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+2022-07-14 10:53:53,944 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2022-07-14 10:53:56,559 INFO o.a.j.JMeter: Loading file: KCA_CWP_11_JULLY.jmx
+2022-07-14 10:53:56,562 INFO o.a.j.s.FileServer: Default base='C:\Users\dell\Documents\MoolyaWorks\Hyundai\jmx\KCA_CWP'
+2022-07-14 10:53:56,563 INFO o.a.j.s.FileServer: Set new base='C:\Users\dell\Documents\MoolyaWorks\Hyundai\jmx\KCA_CWP'
+2022-07-14 10:53:56,853 INFO o.j.r.JARSourceHTTP: Requesting https://jmeter-plugins.org/repo/?installID=windows_10-6078784cf56ce66ecfd07624be390995-gui
+2022-07-14 10:53:57,018 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2022-07-14 10:53:57,042 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2022-07-14 10:53:57,046 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2022-07-14 10:53:57,048 INFO o.a.j.s.SaveService: Loading file: KCA_CWP_11_JULLY.jmx
+2022-07-14 10:53:57,724 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-07-14 10:53:57,724 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-07-14 10:53:57,724 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-07-14 10:53:57,724 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-07-14 10:53:57,725 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2022-07-14 10:53:57,725 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2022-07-14 10:53:57,754 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2022-07-14 10:53:58,051 INFO o.a.j.s.FileServer: Set new base='C:\Users\dell\Documents\MoolyaWorks\Hyundai\jmx\KCA_CWP'
+2022-07-14 10:53:58,411 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2022-07-14 10:53:58,411 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2022-07-14 10:53:58,411 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2022-07-14 10:53:58,412 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2022-07-14 10:53:58,737 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-07-14 10:53:59,139 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-07-14 10:53:59,338 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-07-14 10:53:59,488 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-07-14 10:53:59,627 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-07-14 10:53:59,835 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-07-14 10:53:59,970 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-07-14 10:54:00,236 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-07-14 10:54:00,368 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-07-14 10:54:01,796 INFO o.j.r.PluginManager: Plugins Status: [jpgc-casutg=2.9, jpgc-plugins-manager=1.6, jpgc-wsc=0.7, jmeter-core=5.4.1, jmeter-ftp=5.4.1, jmeter-http=5.4.1, jmeter-jdbc=5.4.1, jmeter-jms=5.4.1, jmeter-junit=5.4.1, jmeter-java=5.4.1, jmeter-ldap=5.4.1, jmeter-mail=5.4.1, jmeter-mongodb=5.4.1, jmeter-native=5.4.1, jmeter-tcp=5.4.1, jmeter-components=5.4.1]
+2022-07-14 10:54:01,799 INFO o.j.r.PluginManagerMenuItem: Plugins Manager has upgrades: [jpgc-casutg, jpgc-plugins-manager]
